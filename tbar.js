@@ -17155,13 +17155,12 @@ var valueCounts = (0, _ramda.curry)(function (arr) {
 var _default = valueCounts;
 exports["default"] = _default;
 },{"ramda":113}],407:[function(require,module,exports){
-const usdata = {
+const usdata = 
+{
   "data": {
     "allAirtable": {
       "distinct": [
-        "ABSA Bank",
         "Abu Dhabi Commercial Bank",
-        "BOS Bank",
         "Bank Hapoalim",
         "Bank of America",
         "Bank of China",
@@ -17172,16 +17171,14 @@ const usdata = {
         "Citigroup",
         "Commerzbank",
         "Commonwealth Bank",
+        "Credit Suisse",
         "Credorax Bank",
         "Deutsche Bank",
         "Erst Bank",
         "First Data",
         "Goldman Sachs",
         "HSBC",
-        "Hinduja Bank",
-        "ING",
         "JP Morgan Chase & Co",
-        "Julius Baer",
         "K + H Bank",
         "Lloyds Bank",
         "Magnet Bank",
@@ -17196,28 +17193,15 @@ const usdata = {
         "Standard Chartered",
         "Swedbank",
         "UBS",
-        "Unicredit",
+        "UOB",
         "Unicredit Bank",
-        "Various Romanian Banks",
         "Wells Fargo"
       ],
       "nodes": [
         {
           "data": {
-            "Penalty_amount_in_native_currency": 0,
-            "Business_Name": "ABSA Bank"
-          }
-        },
-        {
-          "data": {
             "Penalty_amount_in_native_currency": 475000,
             "Business_Name": "Abu Dhabi Commercial Bank"
-          }
-        },
-        {
-          "data": {
-            "Penalty_amount_in_native_currency": 0,
-            "Business_Name": "BOS Bank"
           }
         },
         {
@@ -17378,6 +17362,12 @@ const usdata = {
         },
         {
           "data": {
+            "Penalty_amount_in_native_currency": 700000,
+            "Business_Name": "Credit Suisse"
+          }
+        },
+        {
+          "data": {
             "Penalty_amount_in_native_currency": 51000,
             "Business_Name": "Credorax Bank"
           }
@@ -17480,12 +17470,6 @@ const usdata = {
         },
         {
           "data": {
-            "Penalty_amount_in_native_currency": 0,
-            "Business_Name": "Goldman Sachs"
-          }
-        },
-        {
-          "data": {
             "Penalty_amount_in_native_currency": 9995000,
             "Business_Name": "Goldman Sachs"
           }
@@ -17510,12 +17494,6 @@ const usdata = {
         },
         {
           "data": {
-            "Penalty_amount_in_native_currency": 0,
-            "Business_Name": "Goldman Sachs"
-          }
-        },
-        {
-          "data": {
             "Penalty_amount_in_native_currency": 54750000,
             "Business_Name": "Goldman Sachs"
           }
@@ -17534,24 +17512,6 @@ const usdata = {
         },
         {
           "data": {
-            "Penalty_amount_in_native_currency": 0,
-            "Business_Name": "Hinduja Bank"
-          }
-        },
-        {
-          "data": {
-            "Penalty_amount_in_native_currency": 0,
-            "Business_Name": "ING"
-          }
-        },
-        {
-          "data": {
-            "Penalty_amount_in_native_currency": 0,
-            "Business_Name": "JP Morgan Chase & Co"
-          }
-        },
-        {
-          "data": {
             "Penalty_amount_in_native_currency": 5000000,
             "Business_Name": "JP Morgan Chase & Co"
           }
@@ -17566,12 +17526,6 @@ const usdata = {
           "data": {
             "Penalty_amount_in_native_currency": 38336,
             "Business_Name": "JP Morgan Chase & Co"
-          }
-        },
-        {
-          "data": {
-            "Penalty_amount_in_native_currency": 0,
-            "Business_Name": "Julius Baer"
           }
         },
         {
@@ -17702,8 +17656,26 @@ const usdata = {
         },
         {
           "data": {
+            "Penalty_amount_in_native_currency": 5200000,
+            "Business_Name": "Standard Chartered"
+          }
+        },
+        {
+          "data": {
+            "Penalty_amount_in_native_currency": 6400000,
+            "Business_Name": "Standard Chartered"
+          }
+        },
+        {
+          "data": {
             "Penalty_amount_in_native_currency": 4000000000,
             "Business_Name": "Swedbank"
+          }
+        },
+        {
+          "data": {
+            "Penalty_amount_in_native_currency": 11000000,
+            "Business_Name": "UBS"
           }
         },
         {
@@ -17720,20 +17692,14 @@ const usdata = {
         },
         {
           "data": {
-            "Penalty_amount_in_native_currency": 0,
-            "Business_Name": "Unicredit"
+            "Penalty_amount_in_native_currency": 900000,
+            "Business_Name": "UOB"
           }
         },
         {
           "data": {
             "Penalty_amount_in_native_currency": 360000,
             "Business_Name": "Unicredit Bank"
-          }
-        },
-        {
-          "data": {
-            "Penalty_amount_in_native_currency": 0,
-            "Business_Name": "Various Romanian Banks"
           }
         },
         {
@@ -17777,11 +17743,18 @@ const usdata = {
             "Penalty_amount_in_native_currency": 35000000,
             "Business_Name": "Wells Fargo"
           }
+        },
+        {
+          "data": {
+            "Penalty_amount_in_native_currency": 40000000,
+            "Business_Name": null
+          }
         }
       ]
     }
   }
 }
+
 module.exports = {
     usdata
 }
@@ -17792,71 +17765,80 @@ const z = require("zebras")
 const {usdata}  = require('./sortedata');
 
 function mydata() {   
-    console.log("testing");
-    //console.log(usdata);
-    // var names =  usdata.data.allAirtable.distinct
-    //console.log(names)
-    //var onenode = usdata.data.allAirtable.nodes[1].data
-    //console.log(onenode)
-
     var mynodes = usdata.data.allAirtable.nodes
     var keys = Object.keys(mynodes)
-    //    console.log(keys.length)
-
     var df = [];
     for (n=0; n < keys.length; n++) {
       df.push(usdata.data.allAirtable.nodes[n].data)
     }  
-    //    console.log(df)
-    //const nodegrp = z.groupBy(x => x.Business_Name, df)
-    //console.log(nodegrp)
-    //const onebank = nodegrp['Wells Fargo']
-    //console.log(onebank)
-
     const summed = z.gbSum("Penalty_amount_in_native_currency", z.groupBy(d => d.Business_Name, df))
     const labels = z.getCol("group", summed)
-   // console.log(labels)
+    // console.log(labels)
     const data = z.getCol("sum", summed)
     //console.log(data)
-    return { banks: labels, totals: data};
+    var len = labels.length
+    return { banks: labels, totals: data, length: len };
 }
 
 var datums = mydata();
 
 var mybanks = datums.banks
 var mytotals = datums.totals
+var size = datums.length
+var currency = 'USD'
 
 console.log(mybanks);
 console.log(mytotals);
+console.log(size)
+
+var colors = [
+'rgba(255, 99, 132, 0.7)',
+'rgba(54, 162, 235, 0.7)',
+'rgba(255, 206, 86, 0.7)',
+'rgba(75, 192, 192, 0.7)',
+'rgba(153, 102, 255, 0.7)',
+'rgba(255, 159, 64, 0.7)',
+]
+
+var newcolor = [];
+var repeat = Math.floor(size/6) +1
+console.log("repeater")
+console.log(repeat)
+
+for (i=0; i < repeat; i++) {
+  for (n = 0 ; n< 6; n++)
+    newcolor.push(colors[n])
+}
+//console.log(newcolor)
 
 
 const mdata = {
         labels: mybanks,
         datasets: [{
-            label: 'dataone',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
+            label: 'Penalty in '+currency,
+            backgroundColor: newcolor,
+            borderColor: 'grey',
+            borderWidth: 0.5,
             data: mytotals,
         }]
 }
 
 
 var stackedBar = new Chart(ctx, {
-      type: 'horizontalBar',
+      type: 'pie',
       data: mdata,
       options: {
-          scales: {
-              xAxes: [{
-                  stacked: true
-              }],
-              yAxes: [{
-                  stacked: true
-              }]
-          }
-      }
+        responsive: true,
+        maintainAspectRatio: true,
+        legend: {
+          display: true,
+          fullWidth: true,
+          position: 'left',
+      },
+      
+    }
 });
 
- 
 
 
 

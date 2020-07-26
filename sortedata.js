@@ -1,10 +1,9 @@
-const usdata = {
+const usdata = 
+{
   "data": {
     "allAirtable": {
       "distinct": [
-        "ABSA Bank",
         "Abu Dhabi Commercial Bank",
-        "BOS Bank",
         "Bank Hapoalim",
         "Bank of America",
         "Bank of China",
@@ -15,16 +14,14 @@ const usdata = {
         "Citigroup",
         "Commerzbank",
         "Commonwealth Bank",
+        "Credit Suisse",
         "Credorax Bank",
         "Deutsche Bank",
         "Erst Bank",
         "First Data",
         "Goldman Sachs",
         "HSBC",
-        "Hinduja Bank",
-        "ING",
         "JP Morgan Chase & Co",
-        "Julius Baer",
         "K + H Bank",
         "Lloyds Bank",
         "Magnet Bank",
@@ -39,28 +36,15 @@ const usdata = {
         "Standard Chartered",
         "Swedbank",
         "UBS",
-        "Unicredit",
+        "UOB",
         "Unicredit Bank",
-        "Various Romanian Banks",
         "Wells Fargo"
       ],
       "nodes": [
         {
           "data": {
-            "Penalty_amount_in_native_currency": 0,
-            "Business_Name": "ABSA Bank"
-          }
-        },
-        {
-          "data": {
             "Penalty_amount_in_native_currency": 475000,
             "Business_Name": "Abu Dhabi Commercial Bank"
-          }
-        },
-        {
-          "data": {
-            "Penalty_amount_in_native_currency": 0,
-            "Business_Name": "BOS Bank"
           }
         },
         {
@@ -221,6 +205,12 @@ const usdata = {
         },
         {
           "data": {
+            "Penalty_amount_in_native_currency": 700000,
+            "Business_Name": "Credit Suisse"
+          }
+        },
+        {
+          "data": {
             "Penalty_amount_in_native_currency": 51000,
             "Business_Name": "Credorax Bank"
           }
@@ -323,12 +313,6 @@ const usdata = {
         },
         {
           "data": {
-            "Penalty_amount_in_native_currency": 0,
-            "Business_Name": "Goldman Sachs"
-          }
-        },
-        {
-          "data": {
             "Penalty_amount_in_native_currency": 9995000,
             "Business_Name": "Goldman Sachs"
           }
@@ -353,12 +337,6 @@ const usdata = {
         },
         {
           "data": {
-            "Penalty_amount_in_native_currency": 0,
-            "Business_Name": "Goldman Sachs"
-          }
-        },
-        {
-          "data": {
             "Penalty_amount_in_native_currency": 54750000,
             "Business_Name": "Goldman Sachs"
           }
@@ -377,24 +355,6 @@ const usdata = {
         },
         {
           "data": {
-            "Penalty_amount_in_native_currency": 0,
-            "Business_Name": "Hinduja Bank"
-          }
-        },
-        {
-          "data": {
-            "Penalty_amount_in_native_currency": 0,
-            "Business_Name": "ING"
-          }
-        },
-        {
-          "data": {
-            "Penalty_amount_in_native_currency": 0,
-            "Business_Name": "JP Morgan Chase & Co"
-          }
-        },
-        {
-          "data": {
             "Penalty_amount_in_native_currency": 5000000,
             "Business_Name": "JP Morgan Chase & Co"
           }
@@ -409,12 +369,6 @@ const usdata = {
           "data": {
             "Penalty_amount_in_native_currency": 38336,
             "Business_Name": "JP Morgan Chase & Co"
-          }
-        },
-        {
-          "data": {
-            "Penalty_amount_in_native_currency": 0,
-            "Business_Name": "Julius Baer"
           }
         },
         {
@@ -545,8 +499,26 @@ const usdata = {
         },
         {
           "data": {
+            "Penalty_amount_in_native_currency": 5200000,
+            "Business_Name": "Standard Chartered"
+          }
+        },
+        {
+          "data": {
+            "Penalty_amount_in_native_currency": 6400000,
+            "Business_Name": "Standard Chartered"
+          }
+        },
+        {
+          "data": {
             "Penalty_amount_in_native_currency": 4000000000,
             "Business_Name": "Swedbank"
+          }
+        },
+        {
+          "data": {
+            "Penalty_amount_in_native_currency": 11000000,
+            "Business_Name": "UBS"
           }
         },
         {
@@ -563,20 +535,14 @@ const usdata = {
         },
         {
           "data": {
-            "Penalty_amount_in_native_currency": 0,
-            "Business_Name": "Unicredit"
+            "Penalty_amount_in_native_currency": 900000,
+            "Business_Name": "UOB"
           }
         },
         {
           "data": {
             "Penalty_amount_in_native_currency": 360000,
             "Business_Name": "Unicredit Bank"
-          }
-        },
-        {
-          "data": {
-            "Penalty_amount_in_native_currency": 0,
-            "Business_Name": "Various Romanian Banks"
           }
         },
         {
@@ -620,11 +586,18 @@ const usdata = {
             "Penalty_amount_in_native_currency": 35000000,
             "Business_Name": "Wells Fargo"
           }
+        },
+        {
+          "data": {
+            "Penalty_amount_in_native_currency": 40000000,
+            "Business_Name": null
+          }
         }
       ]
     }
   }
 }
+
 module.exports = {
     usdata
 }
